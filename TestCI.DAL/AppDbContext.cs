@@ -8,6 +8,7 @@ using TestCI.DAL.Models;
 
 namespace TestCI.DAL
 {
+    [ExcludeFromCodeCoverage]
     public class AppDbContext : DbContext
     {
         public AppDbContext()
