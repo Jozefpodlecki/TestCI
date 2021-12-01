@@ -15,7 +15,9 @@ using System.Threading.Tasks;
 
 namespace TestCI.Web.Tests.AutomationTests
 {
+#if DEBUG
     [TestClass]
+#endif
     public class SwaggerTests
     {
         private static HttpClient _client;
