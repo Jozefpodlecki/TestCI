@@ -10,7 +10,7 @@ before_build:
   - cmd: dotnet --version
   - cmd: dotnet restore
 build_script:
-  - cmd: dotnet build --configuration CI --no-restore
+  - cmd: dotnet build --configuration Release --no-restore
 test_script:
-  - cmd: dotnet test  --configuration CI --no-build --no-restore --test-adapter-path:. --logger:Appveyor 
+  - cmd: dotnet test  --configuration Release --no-build --no-restore --test-adapter-path:. --logger:Appveyor 
 deploy: off
