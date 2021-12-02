@@ -13,10 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
     - name: Cache Nuget
     - uses: actions/cache@v1
       with:
@@ -24,6 +20,10 @@ jobs:
         key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
         restore-keys: |
           ${{ runner.os }}-nuget-
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
