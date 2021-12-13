@@ -22,6 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TestCI.Common\TestCI.Common.csproj" />
     <ProjectReference Include="..\TestCI.DAL\TestCI.DAL.csproj" />
+    <ProjectReference Include="..\TestCI.HostedService\TestCI.HostedService.csproj" />
+    <ProjectReference Include="..\TestCI.Modules\TestCI.Modules.csproj" />
   </ItemGroup>
 </Project>

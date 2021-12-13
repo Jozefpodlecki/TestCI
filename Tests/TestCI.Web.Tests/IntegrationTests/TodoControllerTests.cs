@@ -1,13 +1,11 @@
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
 using Sanakan.Web.Tests;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 using TestCI.DAL.Models;
-using TestCI.Web.Controllers;
 using TestCI.Web.Models;
 
 namespace TestCI.Web.Tests.IntegrationTests

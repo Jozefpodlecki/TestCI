@@ -62,9 +62,9 @@
       },
       "MSTest.TestAdapter": {
         "type": "Direct",
-        "requested": "[2.2.3, )",
-        "resolved": "2.2.3",
-        "contentHash": "Xxc6+JyELKOmM46CYrHxL9f2LMZGnx1Neh0dr52THZbmVTwlJM1tj0U5RQ50G+wxsfsU8ZfR1HAUugc+64b6TA==",
+        "requested": "[2.2.8, )",
+        "resolved": "2.2.8",
+        "contentHash": "BzxcfLaOZ25g8usreCBwFvpzH9LcR56pSkMbERO718cTQyAChXBYVuNIU3uK9stCcUWdXxIYl4WloiIu/C/PMQ==",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "System.Diagnostics.TextWriterTraceListener": "4.3.0"
@@ -72,9 +72,9 @@
       },
       "MSTest.TestFramework": {
         "type": "Direct",
-        "requested": "[2.2.3, )",
-        "resolved": "2.2.3",
-        "contentHash": "wqrF2D/uqhTCFJ4bQjhf5vLPXnsjbRZMncr2/+wnhy922YAqLGO2VOjQ6grxGqOWyVWFeIDnQFpLKFRNnrAd7w==",
+        "requested": "[2.2.8, )",
+        "resolved": "2.2.8",
+        "contentHash": "phUoHuGTuw9T5yekxPHLLLq8jE56yufmh2yPlJq1IfkT4a3tYZ2htkeTlnQmzmJP3hI5xYhlqwiHcy3JqVt/OA==",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "System.Diagnostics.TextWriterTraceListener": "4.3.0"
@@ -110,6 +110,62 @@
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.TypeExtensions": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "Discord.Net": {
+        "type": "Transitive",
+        "resolved": "2.4.0",
+        "contentHash": "cP2GoFsvkMf7xruBiUZlIG4HWeUsMosU7qZg+3E0DeIoCEDQ/2N3fi49RX1LjS6CEdBb8s2IabD/OVP7QCEz3g==",
+        "dependencies": {
+          "Discord.Net.Commands": "2.4.0",
+          "Discord.Net.Core": "2.4.0",
+          "Discord.Net.Rest": "2.4.0",
+          "Discord.Net.WebSocket": "2.4.0",
+          "Discord.Net.Webhook": "2.4.0"
+        }
+      },
+      "Discord.Net.Commands": {
+        "type": "Transitive",
+        "resolved": "2.4.0",
+        "contentHash": "KqkqhTBh30ewHVBpGSq10KY0SWk5n0UWFYcxlYziExU+/0g8Ebu3iBGA21SHSvy27fsSUkmQmeUR4e/qs8ksHg==",
+        "dependencies": {
+          "Discord.Net.Core": "2.4.0"
+        }
+      },
+      "Discord.Net.Core": {
+        "type": "Transitive",
+        "resolved": "2.4.0",
+        "contentHash": "3nRnZgXtwId/iXJqY/BmbFFOXf18TRExE3JYil6RaUEBEjFF9ufMbhTcE249W0rfTv6F2dzrNKa0yXS912a4Kw==",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
+          "System.Collections.Immutable": "1.3.1",
+          "System.Interactive.Async": "4.0.0"
+        }
+      },
+      "Discord.Net.Rest": {
+        "type": "Transitive",
+        "resolved": "2.4.0",
+        "contentHash": "dnC7yId1fPG+WNFKceQTvDB4ZUVP6eneDGpChrT0UXdAFQX18EuN0qVXcZWCDcVTev4ZG3VpN2QENa7TNrxQxA==",
+        "dependencies": {
+          "Discord.Net.Core": "2.4.0"
+        }
+      },
+      "Discord.Net.Webhook": {
+        "type": "Transitive",
+        "resolved": "2.4.0",
+        "contentHash": "ajQuZvhQMGzkUr1RmB18okjDDigxCmHBrlgGg51LcY87lik4XfWJdVl690AU9l1xl35UVQ/YF4vEDUduczT29w==",
+        "dependencies": {
+          "Discord.Net.Core": "2.4.0",
+          "Discord.Net.Rest": "2.4.0"
+        }
+      },
+      "Discord.Net.WebSocket": {
+        "type": "Transitive",
+        "resolved": "2.4.0",
+        "contentHash": "+cHZFW2H03sGP+0vm8WG+S0dnhWamHfm1Oa4aSW9q8kWXOUhI+3oytb7VuGD2kxNWR/R8Ow8OVl7yhUiWVqqRA==",
+        "dependencies": {
+          "Discord.Net.Core": "2.4.0",
+          "Discord.Net.Rest": "2.4.0"
         }
       },
       "Microsoft.AspNetCore.Authentication": {
@@ -467,10 +523,10 @@
       },
       "Microsoft.Extensions.Configuration.Abstractions": {
         "type": "Transitive",
-        "resolved": "5.0.0",
-        "contentHash": "ETjSBHMp3OAZ4HxGQYpwyGsD8Sw5FegQXphi0rpoGMT74S4+I2mm7XJEswwn59XAaKOzC15oDSOWEE8SzDCd6Q==",
+        "resolved": "6.0.0",
+        "contentHash": "qWzV9o+ZRWq+pGm+1dF+R7qTgTYoXvbyowRoBxQJGfqTpqDun2eteerjRQhq5PQ/14S+lqto3Ft4gYaRyl4rdQ==",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "5.0.0"
+          "Microsoft.Extensions.Primitives": "6.0.0"
         }
       },
       "Microsoft.Extensions.Configuration.Binder": {
@@ -543,8 +599,8 @@
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions": {
         "type": "Transitive",
-        "resolved": "5.0.0",
-        "contentHash": "ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA=="
+        "resolved": "6.0.0",
+        "contentHash": "xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg=="
       },
       "Microsoft.Extensions.DependencyModel": {
         "type": "Transitive",
@@ -553,10 +609,10 @@
       },
       "Microsoft.Extensions.FileProviders.Abstractions": {
         "type": "Transitive",
-        "resolved": "5.0.0",
-        "contentHash": "iuZIiZ3mteEb+nsUqpGXKx2cGF+cv6gWPd5jqQI4hzqdiJ6I94ddLjKhQOuRW1lueHwocIw30xbSHGhQj0zjdQ==",
+        "resolved": "6.0.0",
+        "contentHash": "0pd4/fho0gC12rQswaGQxbU34jOS1TPS8lZPpkFCH68ppQjHNHYle9iRuHeev1LhrJ94YPvzcRd8UmIuFk23Qw==",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "5.0.0"
+          "Microsoft.Extensions.Primitives": "6.0.0"
         }
       },
       "Microsoft.Extensions.FileProviders.Physical": {
@@ -604,12 +660,12 @@
       },
       "Microsoft.Extensions.Hosting.Abstractions": {
         "type": "Transitive",
-        "resolved": "5.0.0",
-        "contentHash": "cbUOCePYBl1UhM+N2zmDSUyJ6cODulbtUd9gEzMFIK3RQDtP/gJsE08oLcBSXH3Q1RAQ0ex7OAB3HeTKB9bXpg==",
+        "resolved": "6.0.0",
+        "contentHash": "GcT5l2CYXL6Sa27KCSh0TixsRfADUgth+ojQSD5EkzisZxmGFh7CwzkcYuGwvmXLjr27uWRNrJ2vuuEjMhU05Q==",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
-          "Microsoft.Extensions.FileProviders.Abstractions": "5.0.0"
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.FileProviders.Abstractions": "6.0.0"
         }
       },
       "Microsoft.Extensions.Identity.Core": {
@@ -730,8 +786,11 @@
       },
       "Microsoft.Extensions.Primitives": {
         "type": "Transitive",
-        "resolved": "5.0.0",
-        "contentHash": "cI/VWn9G1fghXrNDagX9nYaaB/nokkZn0HYAawGaELQrl8InSezfe9OnfPZLcJq3esXxygh3hkq2c3qoV3SDyQ=="
+        "resolved": "6.0.0",
+        "contentHash": "9+PnzmQFfEFNR9J2aDTfJGGupShHjOuGw4VUv+JB044biSHrnmCIMD+mJHmb2H7YryrfBEXDurxQ47gJZdCKNQ==",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
       },
       "Microsoft.Extensions.WebEncoders": {
         "type": "Transitive",
@@ -1498,6 +1557,14 @@
           "Microsoft.IdentityModel.Tokens": "6.8.0"
         }
       },
+      "System.Interactive.Async": {
+        "type": "Transitive",
+        "resolved": "4.0.0",
+        "contentHash": "tYEzSDQ3rn0G7sGgjcNB91C3dDRJc8m8Lavvu88dwt8FEwKPGZdp/tFs+lQTdqHDV9UItkGIwI8Aa6gGTvzLoQ==",
+        "dependencies": {
+          "System.Linq.Async": "4.0.0"
+        }
+      },
       "System.IO": {
         "type": "Transitive",
         "resolved": "4.3.0",
@@ -1587,6 +1654,11 @@
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0"
         }
+      },
+      "System.Linq.Async": {
+        "type": "Transitive",
+        "resolved": "4.0.0",
+        "contentHash": "WbiYEedFZeM+psmMyoCt1AKbZppAZg8Eq1ZTQ+521fGNeXqlgJj0tZYV5n1LsKRO5osQuitYxGNuzPTy3213sg=="
       },
       "System.Linq.Expressions": {
         "type": "Transitive",
@@ -1789,8 +1861,8 @@
       },
       "System.Runtime.CompilerServices.Unsafe": {
         "type": "Transitive",
-        "resolved": "4.5.2",
-        "contentHash": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ=="
+        "resolved": "6.0.0",
+        "contentHash": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg=="
       },
       "System.Runtime.Extensions": {
         "type": "Transitive",
@@ -2160,12 +2232,48 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "testci.common": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.11",
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.11",
+          "Microsoft.Extensions.Configuration": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.2"
+        }
+      },
       "testci.dal": {
         "type": "Project",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.11",
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.11",
-          "Microsoft.Extensions.Configuration": "5.0.0"
+          "Microsoft.Extensions.Configuration": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.2"
+        }
+      },
+      "testci.hostedservice": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.2",
+          "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
+          "TestCI.Common": "1.0.0",
+          "TestCI.Services": "1.0.0"
+        }
+      },
+      "testci.modules": {
+        "type": "Project",
+        "dependencies": {
+          "Discord.Net": "2.4.0",
+          "Microsoft.Extensions.Configuration": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.2",
+          "TestCI.Services": "1.0.0"
+        }
+      },
+      "testci.services": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.2"
         }
       },
       "testci.web": {
@@ -2178,13 +2286,17 @@
           "Microsoft.EntityFrameworkCore": "5.0.11",
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.11",
           "Microsoft.Extensions.Configuration": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.2",
           "Microsoft.IdentityModel.Tokens": "6.8.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
           "NReco.Logging.File": "1.1.2",
           "Swashbuckle.AspNetCore.SwaggerGen": "6.2.3",
           "Swashbuckle.AspNetCore.SwaggerUI": "6.2.3",
           "System.IdentityModel.Tokens.Jwt": "6.8.0",
-          "TestCI.DAL": "1.0.0"
+          "TestCI.Common": "1.0.0",
+          "TestCI.DAL": "1.0.0",
+          "TestCI.HostedService": "1.0.0",
+          "TestCI.Modules": "1.0.0"
         }
       }
     }

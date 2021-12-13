@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
@@ -9,14 +8,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using TestCI.Common.Builder;
 using TestCI.DAL;
-using TestCI.DAL.Repositories;
+using TestCI.DAL.Builder;
+using TestCI.HostedService.Builder;
+using TestCI.Services.Builder;
 
 namespace TestCI.Web
 {
@@ -73,7 +71,11 @@ namespace TestCI.Web
             });
 
             services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("database"));
-            services.AddScoped<ITodoRepository, TodoRepository>();
+            services.AddRepositories();
+            services.AddTimer();
+            services.AddTaskManager();
+            services.AddServices();
+            services.AddHostedServices();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

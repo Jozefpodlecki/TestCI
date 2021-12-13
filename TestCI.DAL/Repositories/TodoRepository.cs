@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using TestCI.DAL.Models;
 
 namespace TestCI.DAL.Repositories
 {
-    public class TodoRepository : ITodoRepository
+    internal class TodoRepository : ITodoRepository
     {
         private readonly AppDbContext _dbContext;
 
