@@ -9,7 +9,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        lcov:
+          [
+            "Tests/TestCI.HostedService.Tests/TestResults/coverage.info",
+            "Tests/TestCI.Modules.Tests/TestResults/coverage.info",
+            "Tests/TestCI.Web.Tests/TestResults/coverage.info",
+          ]
     steps:
       - uses: actions/checkout@v2
       - name: Cache Nuget
@@ -33,4 +40,4 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: Tests/**/TestResults/coverage.info
+          path-to-lcov: ${{ matrix.lcov }}
