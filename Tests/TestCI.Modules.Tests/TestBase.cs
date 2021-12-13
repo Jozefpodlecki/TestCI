@@ -59,16 +59,6 @@ namespace TestCI.Modules.Tests
             _commandContextMock
                 .Setup(pr => pr.Guild)
                 .Returns(_guildMock.Object);
-
-            _messageChannelMock
-                .Setup(pr => pr.SendMessageAsync(
-                    It.IsAny<string>(),
-                    It.IsAny<bool>(),
-                    It.IsAny<Embed>(),
-                    It.IsAny<RequestOptions>(),
-                    It.IsAny<AllowedMentions>(),
-                    It.IsAny<MessageReference>()))
-                .ReturnsAsync(_userMessageMock.Object);
         }
     }
 }

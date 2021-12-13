@@ -49,5 +49,17 @@ namespace TestCI.Tests
 
             _timerMock.Raise(pr => pr.Tick += null, null, null);
         }
+
+        [TestMethod]
+        public async Task Should_Throw_OnTick()
+        {
+            await SetupAsync();
+
+            _sampleServiceMock
+                .Setup(pr => pr.ShouldExit())
+                .ReturnsAsync(false);
+
+            _timerMock.Raise(pr => pr.Tick += null, null, null);
+        }
     }
 }
