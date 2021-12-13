@@ -13,8 +13,8 @@ jobs:
       matrix:
         lcov:
           [
-            "Tests/TestCI.HostedService.Tests/TestResults/coverage.info",
             "Tests/TestCI.Modules.Tests/TestResults/coverage.info",
+            "Tests/TestCI.HostedService.Tests/TestResults/coverage.info",
             "Tests/TestCI.Web.Tests/TestResults/coverage.info",
           ]
     steps:
