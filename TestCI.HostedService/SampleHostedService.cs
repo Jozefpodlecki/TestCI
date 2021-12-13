@@ -37,7 +37,14 @@ namespace TestCI.HostedService
                 return; 
             }
 
-            throw new Exception();
+            try
+            {
+                throw new Exception();
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

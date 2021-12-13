@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
@@ -60,6 +61,7 @@ namespace TestCI.Tests
                 .ReturnsAsync(false);
 
             _timerMock.Raise(pr => pr.Tick += null, null, null);
+
         }
     }
 }
