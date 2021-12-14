@@ -35,7 +35,9 @@ jobs:
       - name: Publish coverage report to codecov.io
         uses: codecov/codecov-action@v2
         with:
-          files: ./Tests/TestResults/coverage.opencover.xml,./Tests/TestResultsModules/coverage.opencover.xml
+          files: >
+            ./Tests/TestResults/coverage.opencover.xml,
+            ./Tests/TestResultsModules/coverage.opencover.xml
           name: codecov-umbrella
           fail_ci_if_error: true
           verbose: true
