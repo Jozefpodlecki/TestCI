@@ -28,17 +28,18 @@ jobs:
         run: dotnet build --configuration Release --no-restore
       - name: Run Tests
         run: |
-          dotnet test --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json  /p:CoverletOutputFormat=\"lcov,json\"
+          dotnet test Tests\TestCI.DAL.Tests\TestCI.DAL.Tests.csproj  --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/
+          dotnet test Tests\TestCI.HostedService.Tests\TestCI.HostedService.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json
+          dotnet test Tests\TestCI.Modules.Tests\TestCI.Modules.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json
+          dotnet test Tests\TestCI.Web.Tests\TestCI.Web.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json /p:CoverletOutputFormat=lcov
           cat Tests/TestResults/coverage.info
-
       - name: Publish coverage report to coveralls.io
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path-to-lcov: Tests/TestResults/coverage.info
-# dotnet test Tests\TestCI.DAL.Tests\TestCI.DAL.Tests.csproj  --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/
-# dotnet test Tests\TestCI.HostedService.Tests\TestCI.HostedService.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json
-# dotnet test Tests\TestCI.Modules.Tests\TestCI.Modules.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json
-# dotnet test Tests\TestCI.Web.Tests\TestCI.Web.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json /p:CoverletOutputFormat=lcov
 # dotnet test --% --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json  /p:CoverletOutputFormat=\"lcov,json\"
 # run: dotnet test --configuration Release --no-build --verbosity minimal /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json /p:CoverletOutputFormat=lcov
+
+#  dotnet test --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json  /p:CoverletOutputFormat=\"lcov,json\"
+# cat Tests/TestResults/coverage.info
