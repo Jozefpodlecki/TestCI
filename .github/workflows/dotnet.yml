@@ -30,7 +30,6 @@ jobs:
         run: |
           dotnet test Tests/TestCI.DAL.Tests/TestCI.DAL.Tests.csproj  --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/
           dotnet test Tests/TestCI.HostedService.Tests/TestCI.HostedService.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json
-          dotnet test Tests/TestCI.Modules.Tests/TestCI.Modules.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json
           dotnet test Tests/TestCI.Web.Tests/TestCI.Web.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json /p:CoverletOutputFormat=opencover
           dotnet test Tests/TestCI.Modules.Tests/TestCI.Modules.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResultsModules/  /p:CoverletOutputFormat=opencover
       - name: Publish coverage report to codecov.io
@@ -40,3 +39,4 @@ jobs:
           name: codecov-umbrella
           fail_ci_if_error: true
           verbose: true
+#           dotnet test Tests/TestCI.Modules.Tests/TestCI.Modules.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json
