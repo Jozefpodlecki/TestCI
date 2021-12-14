@@ -9,14 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        lcov:
-          [
-            "Tests/TestCI.Modules.Tests/TestResults/coverage.info",
-            "Tests/TestCI.HostedService.Tests/TestResults/coverage.info",
-            "Tests/TestCI.Web.Tests/TestResults/coverage.info",
-          ]
     steps:
       - uses: actions/checkout@v2
       - name: Cache Nuget
@@ -35,9 +27,9 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Run Tests
-        run: dotnet test --configuration Release --no-build --verbosity minimal /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
+        run: dotnet test --configuration Release --no-build --verbosity minimal /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json /p:CoverletOutputFormat=lcov
       - name: Publish coverage report to coveralls.io
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ${{ matrix.lcov }}
+          path-to-lcov: Tests/TestResults/coverage.info
