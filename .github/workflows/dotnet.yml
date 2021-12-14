@@ -28,8 +28,9 @@ jobs:
         run: dotnet build --configuration Release --no-restore
       - name: Run Tests
         run: |
-          rm Tests/TestResults/coverage.json || true
           dotnet test --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json  /p:CoverletOutputFormat=\"lcov,json\"
+          cat Tests/TestResults/coverage.info
+
       - name: Publish coverage report to coveralls.io
         uses: coverallsapp/github-action@master
         with:
