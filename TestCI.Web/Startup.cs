@@ -14,6 +14,7 @@ using TestCI.Common.Builder;
 using TestCI.DAL;
 using TestCI.DAL.Builder;
 using TestCI.HostedService.Builder;
+using TestCI.Modules.Builder;
 using TestCI.Services.Builder;
 
 namespace TestCI.Web
@@ -75,6 +76,7 @@ namespace TestCI.Web
             services.AddTimer();
             services.AddTaskManager();
             services.AddServices();
+            services.AddModules();
             services.AddHostedServices();
         }
 
