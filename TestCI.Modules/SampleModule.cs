@@ -21,7 +21,7 @@ namespace TestCI.Modules
         [Command("test1")]
         [Alias("test2")]
         [Summary("does something")]
-        [Remarks("")]
+        [Remarks(""), SamplePrecondition]
         public async Task RunCommandAsync()
         {
             var message = await _sampleService.GetMessageAsync();
