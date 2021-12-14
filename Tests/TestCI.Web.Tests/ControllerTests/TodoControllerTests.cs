@@ -54,5 +54,25 @@ namespace TestCI.Web.Tests.ControllerTests
             var okObjectResult = result.Should().BeOfType<OkObjectResult>().Subject;
             okObjectResult.Value.Should().NotBeNull();
         }
+
+        [TestMethod]
+        public async Task Should_Remove_Todo()
+        {
+            var todo = new Todo
+            {
+                Name = "test todo",
+            };
+
+            _todoRepositoryMock
+                .Setup(pr => pr.GetAsync(todo.Id))
+                .ReturnsAsync(todo);
+
+            _todoRepositoryMock
+               .Setup(pr => pr.RemoveAsync(todo))
+                .Returns(Task.CompletedTask);
+
+            var result = await _controller.Remove(todo.Id);
+            result.Should().BeOfType<OkResult>();
+        }
     }
 }

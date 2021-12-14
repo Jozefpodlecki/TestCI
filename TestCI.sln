@@ -16,7 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BACA8222-9254-4A51-A8CE-28F1669A0BF0}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
-		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+		.github\workflows\codecov.yml = .github\workflows\codecov.yml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestCI.HostedService", "TestCI.HostedService\TestCI.HostedService.csproj", "{CBEE0560-0158-4D53-9141-DB60423C8DD8}"
