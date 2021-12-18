@@ -1,11 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using TestCI.Queue;
 using TestCI.Queue.Messages;
 
 namespace TestCI.Queue.Builder
 {
+    [ExcludeFromCodeCoverage]
     public static class Extensions
     {
         private static readonly Type _messageHandlerType = typeof(IMessageHandler<>);

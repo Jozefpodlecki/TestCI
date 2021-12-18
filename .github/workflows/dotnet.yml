@@ -32,11 +32,15 @@ jobs:
           dotnet test Tests/TestCI.HostedService.Tests/TestCI.HostedService.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CoverletOutput=../TestResults/coverage.json /p:MergeWith=../TestResults/coverlet.json /p:CoverletOutputFormat=json
           dotnet test Tests/TestCI.Web.Tests/TestCI.Web.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CoverletOutput=../TestResults/coverage.json /p:MergeWith=../TestResults/coverlet.json /p:CoverletOutput=../TestResults/coverage.opencover.xml  /p:CoverletOutputFormat=opencover
           dotnet test Tests/TestCI.Modules.Tests/TestCI.Modules.Tests.csproj --no-build --verbosity minimal --configuration Release
+          dotnet test Tests/TestCI.Queue.Tests/TestCI.Queue.Tests.csproj --no-build --verbosity minimal --configuration Release
+          dotnet test Tests/TestCI.Api.Tests/TestCI.Api.Tests.Tests.csproj --no-build --verbosity minimal --configuration Release
       - name: Publish coverage report to codecov.io
         uses: codecov/codecov-action@v2
         with:
           files: "./Tests/TestResults/coverage.opencover.xml,\
-            ./Tests/TestResults/TestCI.Modules.Tests.coverage.xml"
+            ./Tests/TestResults/TestCI.Modules.Tests.coverage.xml,\
+            ./Tests/TestResults/TestCI.Queue.Tests.coverage.xml,\
+            ./Tests/TestResults/TestCI.Api.Tests.coverage.xml"
           name: codecov-umbrella
           fail_ci_if_error: true
 #           dotnet test Tests/TestCI.Modules.Tests/TestCI.Modules.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CollectCoverage=true /p:CoverletOutput=../TestResults/ /p:MergeWith=../TestResults/coverlet.json
