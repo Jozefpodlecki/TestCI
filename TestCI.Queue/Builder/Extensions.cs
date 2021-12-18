@@ -14,24 +14,24 @@ namespace TestCI.Queue.Builder
         private static readonly Type _messageHandlerType = typeof(IMessageHandler<>);
         private static IDictionary<Type, Type> _messageHandlerTypeCache = new Dictionary<Type, Type>();
 
-        public static async Task Test(this IServiceProvider serviceProvider, BaseMessage message)
-        {
-            IMessageHandler messageHandler;
+        //public static async Task Test(this IServiceProvider serviceProvider, BaseMessage message)
+        //{
+        //    IMessageHandler messageHandler;
 
-            switch (message)
-            {
-                case SampleMessage sm:
-                    messageHandler = serviceProvider.GetRequiredService<IMessageHandler<SampleMessage>>();
-                    break;
-                case AnotherMessage am:
-                    messageHandler = serviceProvider.GetRequiredService<IMessageHandler<AnotherMessage>>();
-                    break;
-                default:
-                    throw new Exception();
-            }
+        //    switch (message)
+        //    {
+        //        case SampleMessage sm:
+        //            messageHandler = serviceProvider.GetRequiredService<IMessageHandler<SampleMessage>>();
+        //            break;
+        //        case AnotherMessage am:
+        //            messageHandler = serviceProvider.GetRequiredService<IMessageHandler<AnotherMessage>>();
+        //            break;
+        //        default:
+        //            throw new Exception();
+        //    }
 
-            await messageHandler.HandleAsync(message);
-        }
+        //    await messageHandler.HandleAsync(message);
+        //}
 
         public static IServiceCollection AddQueue(this IServiceCollection services)
         {
