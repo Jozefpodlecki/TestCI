@@ -61,7 +61,7 @@ namespace TestCI.Api.Tests
                     ItExpr.Is<HttpRequestMessage>(pr => pr.Method == HttpMethod.Get),
                     ItExpr.IsAny<CancellationToken>())
                 .ReturnsAsync(() => {
-                    var stream = File.OpenRead("TestData//sample-object.json");
+                    var stream = File.OpenRead(Path.Combine("TestData", "sample-object.json"));
                     return new HttpResponseMessage
                     {
                         StatusCode = HttpStatusCode.OK,
