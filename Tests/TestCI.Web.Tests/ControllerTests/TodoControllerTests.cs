@@ -22,7 +22,7 @@ namespace TestCI.Web.Tests.ControllerTests
         }
 
         [TestMethod]
-        public async Task Should_Return_Todo_List()
+        public void Should_Return_Todo_List()
         {
             var todos = new[]
             {
@@ -33,7 +33,7 @@ namespace TestCI.Web.Tests.ControllerTests
                 .Setup(pr => pr.Get())
                 .Returns(todos);
 
-            var result = await _controller.GetTodos();
+            var result = _controller.GetTodos();
             var okObjectResult = result.Should().BeOfType<OkObjectResult>().Subject;
             okObjectResult.Value.Should().NotBeNull();
         }
