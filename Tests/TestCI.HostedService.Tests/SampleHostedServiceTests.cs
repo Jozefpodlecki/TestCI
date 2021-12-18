@@ -8,7 +8,7 @@ using TestCI.Common;
 using TestCI.HostedService;
 using TestCI.Services;
 
-namespace TestCI.Tests
+namespace TestCI.HostedService.Tests
 {
     [TestClass]
     public class SampleHostedServiceTests

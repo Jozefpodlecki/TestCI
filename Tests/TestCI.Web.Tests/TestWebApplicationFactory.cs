@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.Configuration;
 using TestCI.Web;
 
-namespace Sanakan.Web.Tests
+namespace TestCI.Web.Tests
 {
     public class TestWebApplicationFactory : WebApplicationFactory<Startup>
     {

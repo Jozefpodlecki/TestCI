@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <Configurations>Debug;Release;CI</Configurations>
+  </PropertyGroup>
+
+   <ItemGroup>
+    <PackageReference Include="Appveyor.TestLogger" Version="2.0.0" />
+  </ItemGroup>
+
+   <ItemGroup>
+     <ProjectReference Include="..\..\TestCI.Api\TestCI.Api.csproj" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <None Update="TestData\sample-object.json">
+       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+     </None>
+   </ItemGroup>
+
+</Project>

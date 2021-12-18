@@ -1,0 +1,1 @@
+codecov -f "Tests\TestCI.Modules.Tests\coverage.opencover.xml" -t 8365dd37-bf6e-4647-9464-10ee7ad73d3e --b main

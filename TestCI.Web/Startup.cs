@@ -10,11 +10,13 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+using TestCI.Api.Builder;
 using TestCI.Common.Builder;
 using TestCI.DAL;
 using TestCI.DAL.Builder;
 using TestCI.HostedService.Builder;
 using TestCI.Modules.Builder;
+using TestCI.Queue.Builder;
 using TestCI.Services.Builder;
 
 namespace TestCI.Web
@@ -72,6 +74,8 @@ namespace TestCI.Web
             });
 
             services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("database"));
+            services.AddApi();
+            services.AddQueue();
             services.AddRepositories();
             services.AddTimer();
             services.AddTaskManager();

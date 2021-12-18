@@ -5,12 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Discord.Net" Version="2.4.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TestCI.Queue\TestCI.Queue.csproj" />
-    <ProjectReference Include="..\TestCI.Services\TestCI.Services.csproj" />
+    <ProjectReference Include="..\TestCI.Api\TestCI.Api.csproj" />
+    <ProjectReference Include="..\TestCI.DAL\TestCI.DAL.csproj" />
   </ItemGroup>
 </Project>

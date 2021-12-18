@@ -7,6 +7,7 @@ namespace TestCI.HostedService.Builder
         public static IServiceCollection AddHostedServices(this IServiceCollection services)
         {
             services.AddHostedService<SampleHostedService>();
+            services.AddHostedService<MessageHandlingHostedService>();
 
             return services;
         }

@@ -1,6 +1,5 @@
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Sanakan.Web.Tests;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -13,17 +12,12 @@ namespace TestCI.Web.Tests.IntegrationTests
     [TestClass]
     public partial class TodoControllerTests
     {
-        protected static HttpClient _client;
+        protected static HttpClient _client = null!;
 
         public TodoControllerTests()
         {
             var factory = new TestWebApplicationFactory();
             _client = factory.CreateClient();
-        }
-
-        public async Task Cleanup()
-        {
-            _client.Dispose();
         }
 
         [TestMethod]
