@@ -23,7 +23,7 @@ namespace TestCI.Web.Controllers
 
         [HttpGet]
         [ProducesResponseType(typeof(Todo), StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetTodos()
+        public IActionResult GetTodos()
         {
             var result = _todoRepository.Get().Take(5);
             return Ok(result);

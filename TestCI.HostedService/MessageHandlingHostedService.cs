@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using TestCI.Common;
 using TestCI.Queue;
+using TestCI.Queue.Builder;
 using TestCI.Services;
 
 namespace TestCI.HostedService
