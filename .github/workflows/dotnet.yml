@@ -38,9 +38,9 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           files: "./Tests/TestResults/TestCI.Queue.Tests.coverage.xml,\
+            ./Tests/TestResults/TestCI.Web.Tests/TestCI.Web.Tests.csproj.xml,\
             ./Tests/TestResults/TestCI.DAL.Tests/TestCI.DAL.Tests.csproj.xml,\
             ./Tests/TestResults/TestCI.HostedService.Tests/TestCI.HostedService.Tests.csproj.xml,\
-            ./Tests/TestResults/TestCI.Web.Tests/TestCI.Web.Tests.csproj.xml,\
             ./Tests/TestResults/TestCI.Modules.Tests.coverage.xml,\
             ./Tests/TestResults/TestCI.Api.Tests.coverage.xml"
           name: codecov-umbrella
