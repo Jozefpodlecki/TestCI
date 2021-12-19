@@ -38,8 +38,8 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           files: "./Tests/TestResults/TestCI.Queue.Tests.coverage.xml,\
-            ./Tests/TestResults/TestCI.Web.Tests/TestCI.Web.Tests.coverage.xml,\
             ./Tests/TestResults/TestCI.DAL.Tests/TestCI.DAL.Tests.coverage.xml,\
+            ./Tests/TestResults/TestCI.Web.Tests/TestCI.Web.Tests.coverage.xml,\
             ./Tests/TestResults/TestCI.HostedService.Tests/TestCI.HostedService.Tests.coverage.xml,\
             ./Tests/TestResults/TestCI.Modules.Tests.coverage.xml,\
             ./Tests/TestResults/TestCI.Api.Tests.coverage.xml"
