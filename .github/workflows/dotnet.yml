@@ -30,7 +30,7 @@ jobs:
         run: |
           dotnet test Tests/TestCI.DAL.Tests/TestCI.DAL.Tests.csproj  --no-build --verbosity minimal --configuration Release /p:CoverletOutput=../TestResults/coverage.json /p:CoverletOutputFormat=json
           dotnet test Tests/TestCI.HostedService.Tests/TestCI.HostedService.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CoverletOutput=../TestResults/coverage.json /p:MergeWith=../TestResults/coverlet.json /p:CoverletOutputFormat=json
-          dotnet test Tests/TestCI.Web.Tests/TestCI.Web.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CoverletOutput=../TestResults/coverage.json /p:MergeWith=../TestResults/coverlet.json /p:CoverletOutput=../TestResults/coverage.opencover.xml  /p:CoverletOutputFormat=opencover /p:Exclude="[*]TestCI.Web.Models*,[*]TestCI.Api.Models*"
+          dotnet test Tests/TestCI.Web.Tests/TestCI.Web.Tests.csproj --no-build --verbosity minimal --configuration Release /p:CoverletOutput=../TestResults/coverage.json /p:MergeWith=../TestResults/coverlet.json /p:CoverletOutput=../TestResults/coverage.opencover.xml  /p:CoverletOutputFormat=opencover /p:Exclude="[*]TestCI.Web.Models*%2c[*]TestCI.Api.Models*"
           dotnet test Tests/TestCI.Modules.Tests/TestCI.Modules.Tests.csproj --no-build --verbosity minimal --configuration Release
           dotnet test Tests/TestCI.Queue.Tests/TestCI.Queue.Tests.csproj --no-build --verbosity minimal --configuration Release
           dotnet test Tests/TestCI.Api.Tests/TestCI.Api.Tests.csproj --no-build --verbosity minimal --configuration Release /p:Exclude="[*]TestCI.Api.Models*"
