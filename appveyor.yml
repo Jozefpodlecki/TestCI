@@ -12,8 +12,8 @@ install:
 before_build:
   - choco install opencover.portable
   - choco install codecov
-  #  - ps: >-
-  #      Get-ChildItem .\ -include packages.lock.json -Recurse | foreach ($_) { remove-item $_.fullname -Force }
+  - ps: >-
+      Get-ChildItem .\ -include packages.lock.json -Recurse | foreach ($_) { remove-item $_.fullname -Force }
   - cmd: dotnet --version
   - cmd: dotnet restore
 build_script:
